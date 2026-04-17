@@ -6,14 +6,42 @@
     <title>Webarchiv - Social Media</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="subpage">
     <main>
+        <header class="site-head" aria-label="Kopfbereich">
+            <div class="service-strip">
+                <span>Friedrich-Ebert-Stiftung</span>
+                <a href="https://www.fes.de" target="_blank" rel="noopener noreferrer">fes.de</a>
+            </div>
+            <nav class="section-nav" aria-label="Hauptbereiche">
+                <a href="index.html">Start</a>
+                <a href="katalog.html">Katalog</a>
+                <a href="suche.html">Suche</a>
+                <a href="pressearchiv.html">Pressearchiv</a>
+                <a class="is-active" href="social-media.html" aria-current="page">Social Media</a>
+            </nav>
+        </header>
+
         <h1>Social Media</h1>
         <p>Dies ist die Platzhalterseite fuer den Bereich Social Media.</p>
-        <a href="index.html">Zurueck zur Startseite</a>
+        <a class="back-link" href="index.html">Zurueck zur Startseite</a>
+
+        <footer class="site-footer" aria-label="Seitenfuss">
+            <div class="footer-links">
+                <a href="https://www.fes.de/impressum" target="_blank" rel="noopener noreferrer">Impressum</a>
+                <a href="https://www.fes.de" target="_blank" rel="noopener noreferrer">www.fes.de</a>
+            </div>
+            <span>&copy; <span class="current-year"></span></span>
+        </footer>
     </main>
+
+    <script>
+        document.querySelectorAll('.current-year').forEach((yearElement) => {
+            yearElement.textContent = new Date().getFullYear();
+        });
+    </script>
 </body>
 </html>

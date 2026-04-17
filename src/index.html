@@ -1,13 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ralfs HTML Docker Test</title>
+    <title>Webarchiv - Startseite</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to Ralfs HTML Docker Test</h1>
-    <p>This is a simple HTML file served by a Docker container.</p>
-    
+    <main class="shell">
+        <header class="topbar">
+            <div class="brand">
+                <div class="brand-mark" aria-hidden="true">WA</div>
+                <div class="brand-text">
+                    <strong>Webarchiv</strong>
+                    <span>Zentraler Zugang zu allen Bereichen</span>
+                </div>
+            </div>
+            <div class="status-chip">Startseite</div>
+        </header>
+
+        <section class="hero" aria-label="Einleitung">
+            <h1>Willkommen im Webarchiv</h1>
+            <p>Wählen Sie einen Bereich aus, um Bestände zu durchsuchen, Presseinhalte zu finden oder Social-Media-Dokumentationen einzusehen.</p>
+        </section>
+
+        <section class="tiles" aria-label="Navigation">
+            <a class="tile" href="katalog.html" aria-label="Zum Katalog wechseln">
+                <div class="tile-header">
+                    <div class="icon" aria-hidden="true">K</div>
+                    <span class="arrow" aria-hidden="true">&rarr;</span>
+                </div>
+                <h2>Katalog</h2>
+                <p>Durchsuchen Sie strukturierte Sammlungen und Metadaten nach Themen, Epochen und Quellen.</p>
+            </a>
+
+            <a class="tile" href="suche.html" aria-label="Zur Suche wechseln">
+                <div class="tile-header">
+                    <div class="icon" aria-hidden="true">S</div>
+                    <span class="arrow" aria-hidden="true">&rarr;</span>
+                </div>
+                <h2>Suche</h2>
+                <p>Starten Sie eine direkte Volltextsuche und filtern Sie Ergebnisse schnell nach Relevanz.</p>
+            </a>
+
+            <a class="tile" href="pressearchiv.html" aria-label="Zum Pressearchiv wechseln">
+                <div class="tile-header">
+                    <div class="icon" aria-hidden="true">P</div>
+                    <span class="arrow" aria-hidden="true">&rarr;</span>
+                </div>
+                <h2>Pressearchiv</h2>
+                <p>Greifen Sie auf Artikel, Clippings und mediale Berichterstattung aus dem Archivbestand zu.</p>
+            </a>
+
+            <a class="tile" href="social-media.html" aria-label="Zum Social-Media-Bereich wechseln">
+                <div class="tile-header">
+                    <div class="icon" aria-hidden="true">M</div>
+                    <span class="arrow" aria-hidden="true">&rarr;</span>
+                </div>
+                <h2>Social Media</h2>
+                <p>Entdecken Sie gesicherte Beiträge, Kanäle und zeitliche Verläufe digitaler Kommunikation.</p>
+            </a>
+        </section>
+    </main>
 </body>
 </html>

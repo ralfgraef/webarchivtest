@@ -152,6 +152,15 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
+.brand-logo {
+    width: 46px;
+    height: 46px;
+    flex: 0 0 46px;
+    display: block;
+    border-radius: 4px;
+    box-shadow: none;
+}
+
 .brand-text {
     padding-top: 1px;
 }
@@ -343,6 +352,35 @@ body.suche-page .topbar {
     border-bottom: 1px solid var(--line);
 }
 
+body.suche-page .topbar .brand {
+    align-items: center;
+    gap: 8px;
+}
+
+body.suche-page .topbar .brand-logo {
+    width: 60px !important;
+    height: 60px !important;
+    max-width: 60px;
+    max-height: 60px;
+    flex: 0 0 60px;
+    object-fit: contain;
+    box-shadow: none !important;
+}
+
+body.suche-page .topbar .brand-text {
+    padding-top: 0;
+}
+
+body.suche-page .topbar .brand-text strong {
+    font-size: clamp(1.55rem, 3vw, 1.9rem);
+    line-height: 1.05;
+}
+
+body.suche-page .topbar .brand-text span {
+    font-size: 1.08rem;
+    line-height: 1.2;
+}
+
 body.suche-page .site-head {
     display: flex;
     justify-content: flex-end;
@@ -367,6 +405,10 @@ body.subpage h1 {
     font-size: clamp(1.55rem, 3.2vw, 2.2rem);
     line-height: 1.12;
     font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
+}
+
+body.suche-page h1 {
+    margin-top: 10px;
 }
 
 body.subpage p {
@@ -473,6 +515,17 @@ body.subpage .back-link:focus-visible {
         margin-bottom: 24px;
     }
 
+    body.suche-page .topbar {
+        flex-wrap: nowrap;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+    body.suche-page .topbar .brand {
+        align-items: center;
+        gap: 8px;
+    }
+
     body.subpage {
         padding: 14px;
     }
@@ -483,6 +536,23 @@ body.subpage .back-link:focus-visible {
 
     body.suche-page .site-head .section-nav {
         width: 100%;
+    }
+
+    body.suche-page .topbar .brand-logo {
+        width: 60px !important;
+        height: 60px !important;
+        max-width: 60px;
+        max-height: 60px;
+        flex: 0 0 60px;
+        box-shadow: none !important;
+    }
+
+    body.suche-page .topbar .brand-text strong {
+        font-size: 1.38rem;
+    }
+
+    body.suche-page .topbar .brand-text span {
+        font-size: 0.96rem;
     }
 
     body.suche-page .site-head .section-nav a {

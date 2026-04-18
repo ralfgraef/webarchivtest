@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="92" height="92" viewBox="0 0 92 92" role="img" aria-labelledby="title desc">
+  <title id="title">FES Logo</title>
+  <desc id="desc">Friedrich-Ebert-Stiftung Wortmarke in Rot und Weiss</desc>
+  <defs>
+    <linearGradient id="fesRed" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d71920"/>
+      <stop offset="100%" stop-color="#b81319"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="88" height="88" rx="8" fill="url(#fesRed)"/>
+  <text x="46" y="57" fill="#ffffff" font-family="Arial Narrow, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" letter-spacing="1">FES</text>
+</svg>

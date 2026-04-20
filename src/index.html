@@ -42,8 +42,8 @@
                 <ul class="tree-root">
                     <li class="tree-root-item">
                         <div class="tree-root-head">
-                            <button class="tree-toggle" type="button" aria-controls="tree-children-webarchiv" aria-expanded="true" aria-label="Baumstruktur einklappen">&times;</button>
-                            <a class="tree-node-root" href="index.html" aria-current="page">Webarchiv</a>
+                            <button class="tree-toggle" type="button" aria-controls="tree-children-webarchiv" aria-expanded="true" aria-label="Baumstruktur einklappen">&minus;</button>
+                            <a class="tree-node tree-node-plain" href="index.html" aria-current="page">Webarchiv</a>
                         </div>
                         <ul class="tree-children" id="tree-children-webarchiv">
                             <li class="tree-node-branch is-collapsed">
@@ -57,9 +57,11 @@
                                     <li><a class="tree-subnode" href="katalog.html#sonstige">Sonstige</a></li>
                                 </ul>
                             </li>
-                            <li><a class="tree-node" href="pressearchiv.html">Pressearchiv</a></li>
-                            <li><a class="tree-node" href="social-media.html">Social Media</a></li>
-                            <li><a class="tree-node" href="suche.html">Suche</a></li>
+                            <li><a class="tree-node tree-node-plain" href="pressearchiv.html">Pressearchiv</a></li>
+                            <li><a class="tree-node tree-node-plain" href="social-media.html">Social Media</a></li>
+                            <li><a class="tree-node tree-node-plain" href="suche.html">Suche</a></li>
+                            <li><a class="tree-node tree-node-plain" href="suche.html">Whatever1</a></li>
+                            <li><a class="tree-node tree-node-plain" href="suche.html">Whatever2</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -127,7 +129,7 @@
                 const isCollapsed = treeRootItem.classList.contains('is-collapsed');
                 treeToggle.setAttribute('aria-expanded', String(!isCollapsed));
                 treeToggle.setAttribute('aria-label', isCollapsed ? 'Baumstruktur aufklappen' : 'Baumstruktur einklappen');
-                treeToggle.textContent = isCollapsed ? '+' : '\u00d7';
+                treeToggle.textContent = isCollapsed ? '+' : '\u2212';
             };
 
             treeToggle.addEventListener('click', () => {

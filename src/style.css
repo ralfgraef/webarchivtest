@@ -377,7 +377,7 @@ body {
     position: absolute;
     top: -2px;
     bottom: -2px;
-    left: 22px;
+    left: 17px;
     width: 1px;
     background: #d7dde3;
 }
@@ -509,7 +509,7 @@ body {
 .tree-root-item::after {
     content: "";
     position: absolute;
-    left: 22px;
+    left: 17px;
     top: 35px;
     width: 1px;
     height: 21px;
@@ -924,7 +924,7 @@ body.subpage .back-link:focus-visible {
     .tree-children::before {
         top: -2px;
         bottom: -2px;
-        left: 18px;
+        left: 17px;
         width: 1px;
         height: auto;
     }
@@ -973,7 +973,7 @@ body.subpage .back-link:focus-visible {
     }
 
     .tree-root-item::after {
-        left: 18px;
+        left: 17px;
     }
 
     .tree-node,

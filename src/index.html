@@ -36,6 +36,36 @@
             <p>Wählen Sie einen Bereich aus, um Bestände zu durchsuchen, Presseinhalte zu finden oder Social-Media-Dokumentationen einzusehen.</p>
         </section>
 
+        <section class="baumnavigation" aria-label="Baumnavigation">
+            <h2>Baumnavigation</h2>
+            <nav aria-label="Navigationsbaum Webarchiv">
+                <ul class="tree-root">
+                    <li class="tree-root-item">
+                        <div class="tree-root-head">
+                            <button class="tree-toggle" type="button" aria-controls="tree-children-webarchiv" aria-expanded="true" aria-label="Baumstruktur einklappen">&times;</button>
+                            <a class="tree-node-root" href="index.html" aria-current="page">Webarchiv</a>
+                        </div>
+                        <ul class="tree-children" id="tree-children-webarchiv">
+                            <li class="tree-node-branch is-collapsed">
+                                <div class="tree-branch-head">
+                                    <button class="tree-toggle tree-toggle-branch" type="button" aria-controls="tree-children-katalog" aria-expanded="false" aria-label="Katalog-Unterseiten aufklappen">+</button>
+                                    <a class="tree-node tree-node-plain" href="katalog.html">Katalog</a>
+                                </div>
+                                <ul class="tree-subchildren" id="tree-children-katalog">
+                                    <li><a class="tree-subnode" href="katalog.html#spd">SPD</a></li>
+                                    <li><a class="tree-subnode" href="katalog.html#gewerkschaften">Gewerkschaften</a></li>
+                                    <li><a class="tree-subnode" href="katalog.html#sonstige">Sonstige</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="tree-node" href="pressearchiv.html">Pressearchiv</a></li>
+                            <li><a class="tree-node" href="social-media.html">Social Media</a></li>
+                            <li><a class="tree-node" href="suche.html">Suche</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+
         <section class="tiles" aria-label="Navigation">
             <a class="tile" href="katalog.html" aria-label="Zum Katalog wechseln">
                 <div class="tile-header">
@@ -87,6 +117,47 @@
         document.querySelectorAll('.current-year').forEach((yearElement) => {
             yearElement.textContent = new Date().getFullYear();
         });
+
+        const treeRootItem = document.querySelector('.tree-root-item');
+        const treeToggle = document.querySelector('.tree-toggle');
+        const treeChildren = document.getElementById('tree-children-webarchiv');
+
+        if (treeRootItem && treeToggle && treeChildren) {
+            const updateTreeToggle = () => {
+                const isCollapsed = treeRootItem.classList.contains('is-collapsed');
+                treeToggle.setAttribute('aria-expanded', String(!isCollapsed));
+                treeToggle.setAttribute('aria-label', isCollapsed ? 'Baumstruktur aufklappen' : 'Baumstruktur einklappen');
+                treeToggle.textContent = isCollapsed ? '+' : '\u00d7';
+            };
+
+            treeToggle.addEventListener('click', () => {
+                treeRootItem.classList.toggle('is-collapsed');
+                updateTreeToggle();
+            });
+
+            updateTreeToggle();
+        }
+
+        const katalogBranch = document.querySelector('.tree-node-branch');
+        const katalogToggle = document.querySelector('.tree-toggle-branch');
+        const katalogChildren = document.getElementById('tree-children-katalog');
+
+        if (katalogBranch && katalogToggle && katalogChildren) {
+            const updateKatalogToggle = () => {
+                const isCollapsed = katalogBranch.classList.contains('is-collapsed');
+                katalogToggle.setAttribute('aria-expanded', String(!isCollapsed));
+                katalogToggle.setAttribute('aria-label', isCollapsed ? 'Katalog-Unterseiten aufklappen' : 'Katalog-Unterseiten einklappen');
+                katalogToggle.textContent = isCollapsed ? '+' : '\u2212';
+            };
+
+            katalogToggle.addEventListener('click', () => {
+                katalogBranch.classList.toggle('is-collapsed');
+                updateKatalogToggle();
+            });
+
+            updateKatalogToggle();
+        }
+
     </script>
 </body>
 </html>
